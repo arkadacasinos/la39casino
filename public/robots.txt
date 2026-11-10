@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://la39casino.vercel.app/sitemap.xml
+Host: https://la39casino.vercel.app

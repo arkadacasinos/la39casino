@@ -1,0 +1,122 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@layer components {
+  /* Mangled prefix: l9c2- */
+  .l9c2-header {
+    background-color: #120c1f;
+    border-bottom: 1px solid #231738;
+  }
+
+  .l9c2-logo-lya {
+    font-family: inherit;
+    font-weight: 900;
+    font-style: italic;
+    color: #ff2a8d;
+    text-shadow: 0 0 12px rgba(255, 42, 141, 0.6);
+  }
+
+  .l9c2-logo-casino {
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+  }
+
+  .l9c2-btn-pink {
+    background: linear-gradient(135deg, #ff2a8d 0%, #e61376 100%);
+    box-shadow: 0 4px 18px rgba(230, 19, 118, 0.45);
+    transition: all 0.2s ease-in-out;
+  }
+  .l9c2-btn-pink:hover {
+    background: linear-gradient(135deg, #ff3f9b 0%, #f71882 100%);
+    box-shadow: 0 6px 24px rgba(230, 19, 118, 0.65);
+    transform: translateY(-1px);
+  }
+
+  .l9c2-btn-dark {
+    background-color: #211832;
+    border: 1px solid #362850;
+    transition: all 0.2s ease-in-out;
+  }
+  .l9c2-btn-dark:hover {
+    background-color: #2c2044;
+    border-color: #4a386d;
+    color: #ffffff;
+  }
+
+  .l9c2-ticker-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: #3b2a5c #150d24;
+  }
+  .l9c2-ticker-scroll::-webkit-scrollbar {
+    height: 4px;
+  }
+  .l9c2-ticker-scroll::-webkit-scrollbar-track {
+    background: #150d24;
+  }
+  .l9c2-ticker-scroll::-webkit-scrollbar-thumb {
+    background: #3b2a5c;
+    border-radius: 4px;
+  }
+
+  /* Pure CSS Drawer Menu using :target */
+  .l9c2-drawer {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 280px;
+    height: 100vh;
+    background-color: #150d24;
+    border-right: 1px solid #2d1c47;
+    z-index: 100;
+    transition: left 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.6);
+  }
+
+  .l9c2-scrim {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+    z-index: 90;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  #l9c2-drawer:target {
+    left: 0;
+  }
+
+  #l9c2-drawer:target ~ .l9c2-scrim {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .l9c2-card-glow {
+    background: linear-gradient(180deg, #1a112c 0%, #130c22 100%);
+    border: 1px solid #2b1c45;
+  }
+
+  .l9c2-seo-article h2 {
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-top: 1.75rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  @media (min-width: 640px) {
+    .l9c2-seo-article h2 {
+      font-size: 1.45rem;
+    }
+  }
+
+  .l9c2-seo-article p {
+    color: #cfc6e4;
+    line-height: 1.65;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+  }
+}
